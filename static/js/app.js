@@ -18,11 +18,11 @@ filter.on("click", function() {
 
   console.log(inputValue);
   console.log(tableData);
-
+  // Create and log data needed for table based on filter date 
   let filteredData = tableData.filter(date_ => date_.datetime === inputValue);
 
   console.log(filteredData);
-  
+  // locate the tbody and loop to create table with filterd data
   let tbody = d3.select("tbody");
 
   filteredData.forEach((tableData) => {
